@@ -2,32 +2,36 @@ import { motion } from 'framer-motion';
 
 const AWARDS = [
   {
-    icon: '🏆',
-    category: 'HACKATHONS',
-    title: 'GCC x 6S Hackathon Winner',
-    desc: 'Won ₹25,000 cash prize building a multi-tenant orchestration platform for GCC. Participated in 7+ more hackathons, recognized in 3 major events (incl. VISAI 2024, PSG ITech 2026).',
-    color: '#eab308',
-  },
-  {
-    icon: '📜',
-    category: 'CERTIFICATION',
-    title: 'Google Cloud Gen AI',
-    desc: 'Certified by Simplilearn. Mastered Generative AI concepts.',
-    color: '#06b6d4',
-  },
-  {
-    icon: '🌏',
-    category: 'GLOBAL EXPOSURE',
-    title: 'INTI Malaysia Program',
-    desc: '4-month mobility program focusing on real-world Data Science.',
+    icon: 'IBM',
+    category: 'IBM Certification',
+    title: 'IBM AI Developer Professional Certificate',
+    desc: 'Professional certification covering AI, Generative AI, Flask, Prompt Engineering, and AI application workflows',
+    date: '2024',
     color: '#a855f7',
   },
   {
-    icon: '🤝',
-    category: 'LEADERSHIP',
-    title: 'Rotaract Director',
-    desc: 'Community Service Director. Led tech-driven social initiatives.',
+    icon: 'CS',
+    category: '11 to 11 Hackathon',
+    title: 'CodeStorm Elite Award',
+    desc: 'Award winner at hackathon conducted by Sri Ramakrishna Institute of Technology',
+    date: 'April 2025',
+    color: '#eab308',
+  },
+  {
+    icon: 'IEEE',
+    category: 'Research Publication',
+    title: 'IEEE ICISS 2026 Publication',
+    desc: 'Published research paper on multilingual NLP learning systems for Indian languages',
+    date: '2026',
     color: '#22c55e',
+  },
+  {
+    icon: '10',
+    category: 'Top 10 Finalist',
+    title: 'Hack the Horizon Finalist',
+    desc: 'Selected among top 10 teams out of 80 participants at KPR Institute of Engineering and Technology',
+    date: 'February 2025',
+    color: '#06b6d4',
   },
 ];
 
@@ -68,6 +72,12 @@ export default function Awards() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{award.title}</h3>
               <p className="text-sm text-gray-400 leading-relaxed">{award.desc}</p>
+              <p
+                className="text-xs font-bold tracking-widest mt-4"
+                style={{ color: award.color, fontFamily: 'JetBrains Mono, monospace' }}
+              >
+                {award.date}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -81,7 +81,7 @@ export default function Navigation() {
             className="font-bold text-white tracking-widest"
             style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '1rem' }}
           >
-            GUNASREE<span style={{ color: '#06b6d4' }}>.AI</span>
+            NITHISH<span style={{ color: '#06b6d4' }}>.AI</span>
           </div>
 
           {/* Desktop nav */}
@@ -123,7 +123,7 @@ export default function Navigation() {
               {isDark ? '☀' : '🌙'}
             </button>
             <a
-              href="/GUNASREE_R_RESUME.pdf"
+              href="/NithishKumar_R_Resume.pdf"
               download
               className="inline-flex items-center justify-center px-4 py-2 text-xs font-bold rounded transition-all hover:bg-cyan-500 hover:text-black cursor-pointer"
               style={{
@@ -174,7 +174,7 @@ export default function Navigation() {
             );
           })}
           <a
-            href="/GUNASREE_R_RESUME.pdf"
+            href="/NithishKumar_R_Resume.pdf"
             download
             className="w-full inline-flex items-center justify-center py-2 text-xs font-bold rounded hover:bg-cyan-500 hover:text-black transition-colors"
             style={{

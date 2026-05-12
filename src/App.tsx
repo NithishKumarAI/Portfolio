@@ -12,7 +12,6 @@ const Projects = lazy(() => import('./components/Projects'));
 const Awards = lazy(() => import('./components/Awards'));
 const Skills = lazy(() => import('./components/Skills'));
 const Contact = lazy(() => import('./components/Contact'));
-const Chatbot = lazy(() => import('./components/Chatbot'));
 
 function App() {
   useEffect(() => {
@@ -38,7 +37,6 @@ function App() {
         <Awards />
         <Skills />
         <Contact />
-        <Chatbot />
       </Suspense>
       <Suspense fallback={null}>
         <NeuralNetworkEasterEgg />

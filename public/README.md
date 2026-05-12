@@ -1,10 +1,9 @@
 # Public Assets
 
-This directory contains static assets like images and the resume PDF.
+This directory contains static assets served by the portfolio.
 
-## ⚠️ IMPORTANT: Resume File
-The file `GUNASREE_R_RESUME.pdf` is the official resume file.
-**DO NOT RENAME, DELETE, OR MODIFY THIS FILE.**
+## Resume File
 
-It is referenced by the application code `src/components/Hero.tsx` using a specific filename for download functionality.
-Replacing this file with a new version is fine, but the **filename must remain exactly `GUNASREE_R_RESUME.pdf`** to ensure the download link works correctly.
+The official resume file is `NithishKumar_R_Resume.pdf`.
+
+It is referenced by the Download CV buttons in `src/components/Hero.tsx` and `src/components/Navigation.tsx`.

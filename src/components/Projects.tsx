@@ -3,95 +3,59 @@ import { ExternalLink, Github, TrendingUp, Zap, Target, ChevronLeft, ChevronRigh
 import { useRef, useState } from 'react';
 import ProjectImpactChart from './ProjectImpactChart';
 
+const PROJECT_VISUAL = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"%3E%3Crect width="800" height="600" fill="%23050b18"/%3E%3Cg stroke="%2338bdf8" stroke-opacity="0.35" fill="none"%3E%3Cpath d="M72 420C210 245 374 515 516 260S686 270 736 170"/%3E%3Cpath d="M80 170L220 310L390 180L560 350L720 210"/%3E%3Cpath d="M120 500L265 370L420 465L610 300L735 390"/%3E%3C/g%3E%3Cg fill="%238b5cf6" fill-opacity="0.45"%3E%3Ccircle cx="80" cy="170" r="10"/%3E%3Ccircle cx="220" cy="310" r="10"/%3E%3Ccircle cx="390" cy="180" r="10"/%3E%3Ccircle cx="560" cy="350" r="10"/%3E%3Ccircle cx="720" cy="210" r="10"/%3E%3C/g%3E%3Cg fill="%2338bdf8" fill-opacity="0.5"%3E%3Ccircle cx="72" cy="420" r="8"/%3E%3Ccircle cx="516" cy="260" r="8"/%3E%3Ccircle cx="736" cy="170" r="8"/%3E%3Ccircle cx="420" cy="465" r="8"/%3E%3C/g%3E%3C/svg%3E';
+
 const projects = [
   {
-    title: 'TaskNerve',
-    tagline: 'Governance-First Task Orchestration for GCCs',
-    description: 'Intelligent orchestration platform for Global Capability Centers that solves the "Governance Paradox" — giving leadership deep oversight without imposing micromanagement on execution teams.',
+    title: 'AI Personal Assistant System',
+    tagline: 'Voice AI Workflow',
+    description: 'Voice-enabled AI assistant with memory retrieval and automated diary generation workflows.',
     achievements: [
-      'Multi-tenant architecture with Row Level Security isolation',
-      'Role-based dashboards: Managers, Team Members, Leaders',
-      'AI intelligence engine with predictive SLA breach detection',
-      'Geospatial cluster health map with Leaflet integration',
-      'Context-aware AI chat powered by Groq/Llama 3.1',
+      'Built speech-to-text AI workflows using Whisper',
+      'Integrated Notion database for memory management',
+      'Implemented retrieval-based memory access',
+      'Generated automated AI diary summaries',
     ],
-    tech: ['Next.js 16', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Shadcn UI', 'Framer Motion', 'Vercel AI SDK', 'Groq'],
-    liveUrl: 'https://task-nerve.vercel.app',
-    githubUrl: 'https://github.com/rgunasree/TaskNerve',
-    gradient: 'from-purple-500 to-cyan-500',
-    impactMetric: { value: 100, label: 'Governance Score', prefix: '' },
-    image: '/images/tasknerve_smurf.png'
+    tech: ['Python', 'Whisper', 'Ollama', 'Notion API'],
+    liveUrl: '#',
+    githubUrl: 'https://github.com/NithishKumarAI/ai-personal-assistant-system',
+    gradient: 'from-blue-500 to-violet-500',
+    impactMetric: { value: 86, displayValue: 'VOICE AI', label: 'WORKFLOW', prefix: '' },
+    image: PROJECT_VISUAL
   },
   {
-    title: 'Crowd Guardian',
-    tagline: 'Edge AI-Powered Smart Crowd Management System',
-    description: 'Production-grade safety platform designed for high-density public spaces that uses computer vision to detect surge patterns and calculate Stampede Risk Index (SRI).',
+    title: 'Daily Diary Web Application',
+    tagline: 'Memory Diary System',
+    description: 'LLM-powered diary generation system using stored user memory and structured retrieval workflows.',
     achievements: [
-      'Decentralized Edge-AI processing using TensorFlow.js in-browser',
-      'SRI Algorithm: Density-based momentum tracking for predictive safety',
-      'Sub-150ms incident propagation via WebSocket event bus',
-      'Interactive emergency protocols with mission-critical checklists',
-      'Zero-latency detection with 100% video data privacy',
+      'Generated personalized diary summaries',
+      'Implemented memory retrieval workflows',
+      'Structured persistent storage system',
+      'Built Flask + MySQL backend workflows',
     ],
-    tech: ['React 18', 'TypeScript', 'TensorFlow.js', 'Node.js', 'WebSocket', 'Tailwind CSS', 'Recharts'],
-    liveUrl: 'https://crowd-guardian-kappa.vercel.app',
-    githubUrl: 'https://github.com/rgunasree/crowd-guardian',
-    gradient: 'from-orange-500 to-red-500',
-    impactMetric: { value: 150, label: 'ms Prop. Latency', prefix: '<' },
-    image: '/images/crowdguardian_smurf.png'
+    tech: ['Python', 'Flask', 'MySQL', 'LLM APIs'],
+    liveUrl: '#',
+    githubUrl: 'https://github.com/NithishKumarAI/daily-diary-web-application',
+    gradient: 'from-violet-500 to-cyan-500',
+    impactMetric: { value: 82, displayValue: 'MEMORY', label: 'DIARY SYSTEM', prefix: '' },
+    image: PROJECT_VISUAL
   },
   {
-    title: 'FairAssess.ai',
-    tagline: 'AI-Powered Hiring Bias Detection Platform',
-    description: 'Enterprise-grade platform that analyzes job descriptions and candidate evaluations for bias, providing real-time fairness analytics and AI-powered rewriting suggestions.',
+    title: 'Regional Language NLP Platform',
+    tagline: 'Multilingual NLP',
+    description: 'Multilingual NLP learning platform focused on accessibility and regional language support.',
     achievements: [
-      '43% boost in candidate diversity through bias detection',
-      'Sub-500ms analysis with LLM-powered insights',
-      'Real-time fairness dashboard with actionable metrics',
-      'Automated bias rewriting with context preservation',
-      'Multi-dimensional bias scoring across gender, race, age',
+      'Built multilingual learning workflows',
+      'Integrated translation and summarization APIs',
+      'Improved regional language accessibility',
+      'Developed text-based interaction systems',
     ],
-    tech: ['Next.js', 'TypeScript', 'Python', 'OpenAI GPT', 'FastAPI', 'PostgreSQL', 'Tailwind CSS'],
-    liveUrl: 'https://fairassess-j0isbrlkp-gunasrees-projects.vercel.app',
-    githubUrl: 'https://github.com/rgunasree/FairAssess',
-    gradient: 'from-blue-500 to-cyan-500',
-    impactMetric: { value: 43, label: 'Diversity Boost' },
-    image: '/images/fair_assess_smurf.png'
-  },
-  {
-    title: 'WhatShouldIWatch.ai',
-    tagline: 'Mood-Based Entertainment Recommender',
-    description: 'Real-time AI recommendation engine that suggests movies and shows based on user mood, preferences, and viewing history with instant results.',
-    achievements: [
-      'Real-time AI recommendations with instant results',
-      'No signup required - frictionless user experience',
-      'Mobile-first responsive design for all devices',
-      'TMDB API integration with 1M+ titles',
-      'Personalized mood-to-content matching algorithm',
-    ],
-    tech: ['Next.js', 'React', 'TypeScript', 'OpenAI API', 'TMDB API', 'Vercel'],
-    liveUrl: 'https://whatshouldiwatch-ai.vercel.app',
-    githubUrl: 'https://github.com/rgunasree/whatshouldiwatch-ai',
-    gradient: 'from-cyan-500 to-teal-500',
-    impactMetric: { value: 500, label: 'ms Response Time', prefix: '<' },
-    image: '/images/what_should_i_watch_smurf.png'
-  },
-  {
-    title: 'AI-Powered Resume Matcher',
-    tagline: 'Intelligent Resume Ranking Engine',
-    description: 'Hybrid NLP system combining BM25 and FAISS for semantic resume-job matching, with recruiter dashboard for efficient candidate screening.',
-    achievements: [
-      'Hybrid search with BM25 + FAISS vector similarity',
-      'Automated skill extraction and matching',
-      'Batch resume upload with parallel processing',
-      'Real-time ranking dashboard for recruiters',
-      'Semantic filtering with 95%+ accuracy',
-    ],
-    tech: ['Python', 'FastAPI', 'FAISS', 'Transformers', 'React', 'PostgreSQL', 'Docker'],
-    githubUrl: 'https://github.com/rgunasree/resume-matcher',
-    gradient: 'from-teal-500 to-emerald-500',
-    impactMetric: { value: 95, label: 'Match Accuracy' },
-    image: '/images/resume_matcher_smurf.png'
+    tech: ['Python', 'Flask', 'APIs', 'NLP'],
+    liveUrl: '#',
+    githubUrl: 'https://github.com/NithishKumarAI/regional-language-nlp-platform',
+    gradient: 'from-cyan-500 to-blue-500',
+    impactMetric: { value: 88, displayValue: 'MULTILINGUAL', label: 'NLP SYSTEM', prefix: '' },
+    image: PROJECT_VISUAL
   },
 ];
 
@@ -252,11 +216,15 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
             <div className={`bg-gradient-to-br ${project.gradient} bg-opacity-10 rounded-3xl p-6 border border-white/10 backdrop-blur-md shadow-xl`}>
               <div className="text-center">
                 <TrendingUp className="w-12 h-12 text-white mx-auto mb-4 drop-shadow-lg" />
-                <div className="text-5xl font-black text-white mb-2 tracking-tight drop-shadow-lg">
-                  {project.impactMetric.prefix}{project.impactMetric.value}
-                  {!project.impactMetric.prefix && '%'}
+                <div className={`${project.impactMetric.displayValue.length > 10 ? 'text-2xl md:text-3xl leading-tight' : 'text-5xl'} font-black text-white mb-2 tracking-tight drop-shadow-lg`}>
+                  {project.impactMetric.displayValue ?? (
+                    <>
+                      {project.impactMetric.prefix}{project.impactMetric.value}
+                      {!project.impactMetric.prefix && '%'}
+                    </>
+                  )}
                 </div>
-                <div className="text-sm text-white/90 font-bold uppercase tracking-widest">
+                <div className="text-sm text-white/90 font-bold uppercase tracking-widest leading-tight">
                   {project.impactMetric.label}
                 </div>
               </div>
@@ -376,7 +344,7 @@ export default function Projects() {
                 <h3 className="text-xl font-bold text-white mb-2">View More</h3>
                 <p className="text-gray-400 mb-6">Check out more projects on GitHub</p>
                 <a
-                  href="https://github.com/rgunasree"
+                  href="https://github.com/NithishKumarAI"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-white font-semibold hover:opacity-90 transition-opacity"

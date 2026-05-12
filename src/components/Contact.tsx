@@ -1,39 +1,50 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, MapPin, Send, Instagram } from 'lucide-react';
+import { Mail, Linkedin, Github, MapPin, Send } from 'lucide-react';
+
+function HuggingFaceIcon({ className = '' }: { className?: string }) {
+  return (
+    <img
+      src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+      alt=""
+      className={className}
+      loading="lazy"
+    />
+  );
+}
 
 const contactMethods = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'gunasreeer@gmail.com',
-    href: 'mailto:gunasreeer@gmail.com',
+    value: 'nithishswim7@gmail.com',
+    href: 'mailto:nithishswim7@gmail.com',
     color: 'from-blue-500 to-cyan-500',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/gunasree-r-55024224a',
-    href: 'https://www.linkedin.com/in/gunasree-r-55024224a/',
+    value: 'linkedin.com/in/nithish-kumar-ai/',
+    href: 'https://www.linkedin.com/in/nithish-kumar-ai/',
     color: 'from-cyan-500 to-teal-500',
   },
   {
     icon: Github,
     label: 'GitHub',
-    value: 'github.com/rgunasree',
-    href: 'https://github.com/rgunasree',
+    value: 'github.com/NithishKumarAI',
+    href: 'https://github.com/NithishKumarAI',
     color: 'from-teal-500 to-emerald-500',
   },
   {
-    icon: Instagram,
-    label: 'Instagram',
-    value: '@gunasree__r',
-    href: 'https://www.instagram.com/gunasree__r/',
-    color: 'from-pink-500 to-rose-500',
+    icon: HuggingFaceIcon,
+    label: 'Hugging Face',
+    value: 'huggingface.co/NithishKumarai',
+    href: 'https://huggingface.co/NithishKumarai',
+    color: 'from-yellow-500/20 to-amber-500/20',
   },
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Salem, Tamil Nadu, India',
+    value: 'Theni, Tamil Nadu, India',
     color: 'from-emerald-500 to-green-500',
   },
 ];
@@ -83,7 +94,7 @@ export default function Contact() {
                     transition={{ duration: 0.5 }}
                     className={`inline-flex items-center justify-center w-14 h-14 bg-gradient-to-r ${method.color} rounded-full mb-4`}
                   >
-                    <method.icon className="w-7 h-7 text-white" />
+                    <method.icon className={method.label === 'Hugging Face' ? 'w-8 h-8' : 'w-7 h-7 text-white'} />
                   </motion.div>
                   <h3 className="text-white font-semibold mb-2">{method.label}</h3>
                   <p className="text-gray-400 text-sm break-words">{method.value}</p>
@@ -120,7 +131,7 @@ export default function Contact() {
             I'm actively seeking opportunities where I can apply my AI/ML expertise to solve real-world problems. Whether it's a full-time position, internship, or exciting project collaboration, I'd love to hear from you!
           </p>
           <motion.a
-            href="mailto:gunasreeer@gmail.com"
+            href="mailto:nithishswim7@gmail.com"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-white font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-shadow"
@@ -137,8 +148,8 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mt-12 text-center text-gray-500 text-sm"
         >
-          <p>© 2025 R. Gunasree. Crafted with passion and code.</p>
-          <p className="mt-2">Hint: Try pressing Ctrl + Shift + N for a surprise! 🎨</p>
+          <p>©2026 Nithish Kumar R | Built with AI and curiosity</p>
+          <p className="mt-2">Open to AI engineering and research opportunities</p>
         </motion.div>
       </div>
     </section>

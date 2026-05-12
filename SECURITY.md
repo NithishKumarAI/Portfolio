@@ -1,12 +1,15 @@
 # Security & Contribution Policy
 
-## 🔒 Security Policy
-This project is a personal portfolio and is strictly maintained by **@rgunasree**.
+## Security Policy
 
-## 🛑 Unauthorized Changes
-- **No external resume files** or personal data should ever be committed to this repository.
-- **Automated Bots**: Automated pull requests (from Vercel, Dependabot, etc.) must be manually reviewed before merging.
-- **Direct Pushes**: Direct pushes to the `main` branch are restricted. All changes should go through a Pull Request review process if possible, or be performed solely by the repository owner.
+This project is a personal portfolio maintained for Nithish Kumar R.
 
-## 📄 File Integrity
-The file `public/resume.pdf` is the official resume. Overwriting this file with unauthorized versions is strictly prohibited.
+## Unauthorized Changes
+
+- No unauthorized resume files or personal data should be committed to this repository.
+- Automated pull requests should be manually reviewed before merging.
+- Direct pushes to the main branch should be limited to the repository owner or approved maintainers.
+
+## File Integrity
+
+The file `public/NithishKumar_R_Resume.pdf` is the official resume used by the portfolio download links.

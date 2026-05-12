@@ -1,63 +1,27 @@
-# GUNASREE.AI | AI Engineering Portfolio
+# Nithish Kumar R | AI Portfolio
 
-A high-performance, immersive portfolio showcasing production-grade AI/ML solutions, architected with **React 18**, **TypeScript**, and **Three.js**. Optimized for **Vercel Speed Insights** and precision-engineered for 2026 security standards.
+An immersive portfolio for Nithish Kumar R, focused on AI engineering, machine learning, NLP systems, and applied research projects. Built with React, TypeScript, Vite, Three.js, Framer Motion, and Tailwind CSS.
 
-![Portfolio Preview](https://github.com/rgunasree/gunasree-portfolio/raw/main/public/images/portfolio_preview.png)
+## Highlights
 
-## 🚀 Key Highlights
+- Interactive hero section with animated profile visuals.
+- Featured AI project carousel with responsive cards and project metrics.
+- Credibility and awards section for certifications, publications, and hackathon recognition.
+- Contact section with Email, LinkedIn, GitHub, Hugging Face, and location cards.
+- Production build optimized with Vite and Vercel Speed Insights.
 
-- **🧠 Production AI Showcase**: Featuring **TaskNerve** (GCC Orchestration) and **Crowd Guardian** (Edge-AI Crowd Safety).
-- **🌐 3D Interactive Visuals**: Custom Three.js wireframe sphere with mouse-tracking and real-time shader modulation.
-- **⚡ Performance First**: Optimized for LCP (<2.0s goal) using component lazy loading, image prioritization, and code splitting.
-- **🛰️ Intelligent Navigation**: Intersection Observer-driven menu highlighting and smooth planet-hopping scrolling.
-- **✨ Neural Network Easter Egg**: Interactive hidden simulation (Toggle with `Ctrl + Shift + N`).
-- **🛡️ Secure Stack**: Zero-vulnerability dependency management (fixed Rollup, Flatted, and Picomatch ReDoS alerts).
+## Development
 
-## 🛠️ Technology Stack
+```bash
+npm install
+npm run dev
+npm run build
+```
 
-| Category | Technologies |
-| :--- | :--- |
-| **Core** | React 18, Vite, TypeScript |
-| **3D & Animation** | Three.js, Framer Motion |
-| **Styling** | Tailwind CSS, Lucide Icons |
-| **Data Viz** | Recharts, Project-Specific Metrics |
-| **Deployment** | Vercel (Speed Insights + Analytics) |
-| **Backend/AI** | Supabase, TensorFlow.js (Edge-AI), Groq LPU |
+## Resume
 
-## 📦 Project Portfolio
+The portfolio CV download points to `public/NithishKumar_R_Resume.pdf`.
 
-### 1. TaskNerve (Governance-First Orchestration)
-Intelligent platform for GCCs that solves the "Governance Paradox"—oversight without micromanagement. 
-- **Tech**: Next.js 16, Supabase RLS, Al-Predictive SLA detection.
-- [GitHub](https://github.com/rgunasree/TaskNerve) | [Live Demo](https://task-nerve.vercel.app)
+## License
 
-### 2. Crowd Guardian (Smart Crowd AI)
-Edge AI-Powered Real-Time Stampede Prevention using Computer Vision.
-- **Tech**: TensorFlow.js, WebSocket Bus, SRI Algorithm.
-- [GitHub](https://github.com/rgunasree/crowd-guardian) | [Live Demo](https://crowd-guardian-kappa.vercel.app)
-
-### 3. FairAssess.ai (Bias Detection)
-Transformer-based bias detection for enterprise hiring. 
-- **Impact**: 52% boost in candidate diversity.
-
-## ⚙️ Installation & Development
-
-1. **Clone & Install**
-   ```bash
-   git clone https://github.com/rgunasree/gunasree-portfolio.git
-   cd gunasree-portfolio
-   npm install
-   ```
-
-2. **Run Development**
-   ```bash
-   npm run dev
-   ```
-
-3. **Build & Optimize**
-   ```bash
-   npm run build
-   ```
-
-## 📄 License
-MIT © 2026 R. Gunasree. Crafted with passion for AI innovation.
+MIT © 2026 Nithish Kumar R.

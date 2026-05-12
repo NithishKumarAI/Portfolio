@@ -2,37 +2,28 @@ import { motion } from 'framer-motion';
 
 const EXPERIENCES = [
   {
-    title: 'AI Engineer',
-    company: 'Ausweg Info Control Pvt Ltd',
-    date: 'Jul 2025 - Jan 2026',
+    title: 'Database Administrator Intern',
+    company: 'IMET Tooling India Pvt Ltd',
+    date: 'Jul 2024 – Mar 2026',
     bullets: [
-      'Built LLM chatbot for EMS, automating support workflows.',
-      'Engineered RAG pipelines boosting accuracy by 72%.',
-      'Integrated IoT telemetry reducing data lookup time by 60%.',
+      'Designed and managed MySQL database schemas for B2B systems',
+      'Optimized SQL queries and backend workflows',
+      'Supported API integration, testing, and debugging',
+      'Worked in XAMPP-based development environment',
     ],
     color: '#06b6d4',
   },
   {
-    title: 'Data Analyst',
-    company: 'Ausweg Info Control Pvt Ltd',
-    date: 'Aug 2024 - Dec 2024',
+    title: 'IEEE Publication',
+    company: 'ICISS 2026 — IEEE Affiliated Conference',
+    date: '2026',
     bullets: [
-      'Optimized MQTT IIoT pipelines (38% more stable).',
-      'Enhanced real-time production visibility by 32%.',
-      'Reduced data ingestion latency by 25%.',
+      'Published paper on multilingual NLP learning systems',
+      'Worked on AI-driven educational systems for Indian languages',
+      'Focused on multilingual accessibility and NLP workflows',
+      'Contributed to research and system design implementation',
     ],
     color: '#a855f7',
-  },
-  {
-    title: 'ML Intern',
-    company: 'Corizo Pvt Ltd',
-    date: 'Jun 2023',
-    bullets: [
-      'Designed RNN/LSTM models for stock prediction (+24% acc).',
-      'Reduced model training time by 33% via pipeline optimization.',
-      'Built wine-quality prediction models.',
-    ],
-    color: '#4ade80',
   },
 ];
 
@@ -48,7 +39,7 @@ export default function Experience() {
           style={{ fontFamily: 'Inter, sans-serif' }}
         >
           <span className="w-2 md:w-3 h-10 md:h-12 bg-cyan-500 block rounded-r-lg" />
-          CAREER IMPACT
+          Experience & Research
         </motion.h2>
 
         <div className="relative border-l-2 border-slate-800 ml-4 md:ml-8">

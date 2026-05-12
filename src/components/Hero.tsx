@@ -3,18 +3,18 @@ import { useEffect, useRef, useState, lazy, Suspense } from 'react';
 const ProfileSphere = lazy(() => import('./ProfileSphere'));
 
 const BIOS = [
-  'Specializing in <strong>LLMs, RAG Pipelines, and IoT Analytics</strong>. Merging predictive modeling with production-grade engineering.',
-  'Building <strong>AI systems</strong> that don\'t just predict — they <strong>explain, adapt, and scale</strong>. From sensor data to semantic search.',
-  'From <strong>hackathon breakthroughs to deployed models</strong>. Passionate about bridging the gap between research and real-world AI.',
-  'Led the development of <strong>FairAssess.ai</strong>, a transformer-based bias detection engine that successfully <strong>increased diverse applicant rates by 52%</strong>.',
-  'Recently wrapped my <strong>AI Engineer role at Ausweg</strong> (Jan 2026), where I engineered an LLM chatbot and <strong>boosted RAG pipeline accuracy by 72%</strong>.',
-  'Creator of <strong>Resume Matcher</strong>. Achieved <strong>90% screening automation</strong> using hybrid BM25 and FAISS vector scoring.',
-  'Data Analyst turned AI Engineer. Optimized <strong>MQTT IIoT pipelines by 38%</strong> and cut telemetry data lookup times by <strong>60%</strong>.',
-  'Global perspective gained through the <strong>INTI Malaysia Program</strong>, spending 4 months immersed in real-world, cross-border <strong>Data Science challenges</strong>.',
-  'Won the <strong>GCC x 6S Hackathon (₹25,000 prize)</strong> by building a robust multi-tenant orchestration platform. Further recognized in 3 of 7+ major competitive hackathons (incl. PSG ITech 2026).',
-  '<strong>Google Cloud Gen AI Certified</strong> machine learning developer. I bridge the gap between <strong>React/Next.js interfaces</strong> and deep Python LLM integration.',
-  'Served as <strong>Rotaract Community Service Director</strong>. I strongly believe technology and leadership should be together used to drive <strong>meaningful social impact</strong>.',
-  'My ML engineering journey started by designing <strong>RNN/LSTM models for stock prediction</strong> at Corizo, yielding a <strong>+24% accuracy boost</strong> and 33% faster training pipelines.',
+  'Artificial Intelligence student focused on <strong>machine learning, AI systems, and LLMs</strong>. Learning the foundations deeply while building practical AI products.',
+  'Exploring <strong>AI research and applied ML engineering</strong>. I like turning models, data, and experiments into useful real-world systems.',
+  'Building toward work in <strong>LLMs, retrieval systems, model evaluation, and AI applications</strong> with a research-first engineering mindset.',
+  'Interested in <strong>how intelligent systems reason, adapt, and fail</strong>. I study model behavior so AI products can become more reliable.',
+  'Focused on <strong>end-to-end AI workflows</strong>: data preparation, model training, evaluation, deployment, and continuous improvement.',
+  'I enjoy building <strong>AI-powered products</strong> that connect strong ML concepts with clean user-facing experiences.',
+  'Learning advanced AI concepts through <strong>hands-on experiments, research papers, and production-minded projects</strong>.',
+  'My goal is to grow into an <strong>AI Research Scientist</strong> who can also engineer systems that work outside the lab.',
+  'Currently sharpening skills across <strong>Python, ML pipelines, neural networks, NLP, and large language models</strong>.',
+  'I care about <strong>responsible AI</strong>: evaluation, bias awareness, interpretability, and building systems users can trust.',
+  'Research interests include <strong>LLM reasoning, retrieval-augmented generation, multimodal AI, and applied machine learning</strong>.',
+  'I am driven by curiosity, disciplined experimentation, and the challenge of building <strong>real-world AI applications</strong>.',
 ];
 
 export default function Hero() {
@@ -71,23 +71,23 @@ export default function Hero() {
         <ProfileSphere />
       </Suspense>
 
-      {/* SYSTEM ONLINE badge */}
+      {/* AI system status badge */}
       <div
         className="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-cyan-400 border border-cyan-500/30 rounded-full bg-cyan-500/10 animate-pulse"
         style={{ fontFamily: 'JetBrains Mono, monospace', letterSpacing: '0.15em', zIndex: 2, position: 'relative' }}
       >
-        SYSTEM ONLINE
+        AI SYSTEM ACTIVE
       </div>
 
       {/* Profile picture - no glow, clean border */}
       <div className="relative flex items-center justify-center mb-6" style={{ zIndex: 2 }}>
           <img
-            src="/profile.png"
+            src="/profile-photo.jpg"
             onError={(e) => {
               (e.target as HTMLImageElement).src =
-                'https://ui-avatars.com/api/?name=Gunasree+R&background=0D8ABC&color=fff&size=256';
+                'https://ui-avatars.com/api/?name=Nithish+Kumar+R&background=0D8ABC&color=fff&size=256';
             }}
-            alt="Gunasree R"
+            alt="Nithish Kumar R"
             className="relative rounded-full object-cover border-4"
             style={{
               width: 200,
@@ -108,7 +108,7 @@ export default function Hero() {
           textShadow: '0 0 40px rgba(6,182,212,0.3)',
         }}
       >
-        GUNASREE R
+        Nithish Kumar R
       </h1>
 
       {/* Title */}
@@ -116,7 +116,7 @@ export default function Hero() {
         className="text-cyan-400 tracking-widest font-bold mb-8"
         style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.9rem', letterSpacing: '0.3em' }}
       >
-        AI ENGINEER
+        Aspiring AI Research Scientist | AI &amp; ML Engineer
       </h2>
 
       {/* Bio terminal box */}
@@ -184,10 +184,10 @@ export default function Hero() {
       {/* Stats */}
       <div className="grid grid-cols-4 gap-3 mb-10" style={{ maxWidth: 480, width: '90%' }}>
         {[
-          { value: '1+', label: 'YEARS EXP' },
-          { value: '75%', label: 'EFFICIENCY', color: '#22d3ee' },
-          { value: '8.1', label: 'CGPA', color: '#c084fc' },
-          { value: '5+', label: 'PROJECTS' },
+          { value: '1.5+', label: 'YEARS EXP' },
+          { value: 'ICISS', label: 'IEEE 2026', color: '#22d3ee' },
+          { value: '7.25', label: 'CGPA', color: '#c084fc' },
+          { value: '3+', label: 'PROJECTS' },
         ].map(({ value, label, color }) => (
           <div
             key={label}
@@ -208,7 +208,7 @@ export default function Hero() {
       </div>
 
       {/* CTA buttons */}
-      <div className="flex flex-col sm:flex-row gap-3 items-center">
+      <div className="flex flex-col sm:flex-row gap-3 items-center mb-16">
         <a
           href="#projects"
           onClick={(e) => {
@@ -227,9 +227,9 @@ export default function Hero() {
           VIEW MY WORK
         </a>
         <a
-          href="/GUNASREE_R_RESUME.pdf"
+          href="/NithishKumar_R_Resume.pdf"
           target="_blank"
-          download="GUNASREE_R_RESUME.pdf"
+          download="NithishKumar_R_Resume.pdf"
           className="inline-flex items-center justify-center px-6 py-2.5 rounded text-sm font-bold transition-all hover:bg-cyan-400"
           style={{
             background: '#06b6d4',
