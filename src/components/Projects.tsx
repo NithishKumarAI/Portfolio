@@ -7,20 +7,19 @@ const PROJECT_VISUAL = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/
 
 const projects = [
   {
-    title: 'AI Personal Assistant System',
-    tagline: 'Voice AI Workflow',
-    description: 'Voice-enabled AI assistant with memory retrieval and automated diary generation workflows.',
+    title: 'AI Diary Assistant',
+    tagline: 'Cloud AI Journaling Workflow',
+    description: 'Built and deployed a cloud-based AI journaling platform integrating browser-native speech transcription, Gemini multi-model fallback routing, and Notion memory APIs for automated diary generation and retrieval workflows.',
     achievements: [
-      'Built speech-to-text AI workflows using Whisper',
-      'Integrated Notion database for memory management',
-      'Implemented retrieval-based memory access',
-      'Generated automated AI diary summaries',
-    ],
-    tech: ['Python', 'Whisper', 'Ollama', 'Notion API'],
-    liveUrl: '#',
+      'Built browser-native speech-to-text workflows using Groq Whisper API',
+      'Implemented Gemini multi-model fallback routing for resilient AI inference',
+      'Integrated Notion APIs as a persistent cloud memory layer',
+      ],
+    tech: ['Multi-Model Routing','Python', 'Streamlit', 'Gemini API', 'Groq Whisper API', 'Notion API','GitHub','Streamlit Cloud','LLM Routing'],
+    liveUrl: 'https://ai-diary-assistant-522323461346.asia-south1.run.app/',
     githubUrl: 'https://github.com/NithishKumarAI/ai-personal-assistant-system',
     gradient: 'from-blue-500 to-violet-500',
-    impactMetric: { value: 86, displayValue: 'VOICE AI', label: 'WORKFLOW', prefix: '' },
+    impactMetric: { value: 92, displayValue: 'AI DIARY', label: 'CLOUD WORKFLOW', prefix: '' },
     image: PROJECT_VISUAL
   },
   {
@@ -34,7 +33,7 @@ const projects = [
       'Built Flask + MySQL backend workflows',
     ],
     tech: ['Python', 'Flask', 'MySQL', 'LLM APIs'],
-    liveUrl: '#',
+    liveUrl: 'https://ai-diary-assistant.streamlit.app/',
     githubUrl: 'https://github.com/NithishKumarAI/daily-diary-web-application',
     gradient: 'from-violet-500 to-cyan-500',
     impactMetric: { value: 82, displayValue: 'MEMORY', label: 'DIARY SYSTEM', prefix: '' },
@@ -137,7 +136,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
               <span>Key Achievements</span>
             </div>
             <div className="grid gap-2">
-              {project.achievements.slice(0, 3).map((achievement, i) => (
+              {project.achievements.slice(0, 5).map((achievement, i) => (
                 <motion.div
                   key={i}
                   className="flex items-start gap-2"
