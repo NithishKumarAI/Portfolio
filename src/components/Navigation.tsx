@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ResumeLink from './ResumeLink';
 
 const navItems = [
   { label: 'HOME', href: '#home' },
@@ -122,20 +123,7 @@ export default function Navigation() {
             >
               {isDark ? '☀' : '🌙'}
             </button>
-            <a
-              href="/NithishKumar_R_Resume.pdf"
-              download
-              className="inline-flex items-center justify-center px-4 py-2 text-xs font-bold rounded transition-all hover:bg-cyan-500 hover:text-black cursor-pointer"
-              style={{
-                background: 'rgba(6,182,212,0.1)',
-                border: '1px solid rgba(6,182,212,0.5)',
-                color: '#22d3ee',
-                fontFamily: 'JetBrains Mono, monospace',
-                letterSpacing: '0.05em',
-              }}
-            >
-              DOWNLOAD CV
-            </a>
+            <ResumeLink />
           </div>
 
           {/* Mobile hamburger */}
@@ -173,19 +161,7 @@ export default function Navigation() {
               </a>
             );
           })}
-          <a
-            href="/NithishKumar_R_Resume.pdf"
-            download
-            className="w-full inline-flex items-center justify-center py-2 text-xs font-bold rounded hover:bg-cyan-500 hover:text-black transition-colors"
-            style={{
-              background: 'rgba(6,182,212,0.1)',
-              border: '1px solid rgba(6,182,212,0.5)',
-              color: '#22d3ee',
-              fontFamily: 'JetBrains Mono, monospace',
-            }}
-          >
-            DOWNLOAD CV
-          </a>
+          <ResumeLink className="w-full py-2" />
         </div>
       )}
     </nav>

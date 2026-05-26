@@ -20,7 +20,7 @@ npm run build
 
 ## Resume
 
-The portfolio CV download points to `public/NithishKumar_R_Resume.pdf`.
+The portfolio resume download points to `public/resume.pdf`.
 
 ## License
 

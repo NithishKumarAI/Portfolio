@@ -1,8 +1,8 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ]
+  "rewrites": [
+    {
+      "source": "/((?!resume\\.pdf$|.*\\.(pdf|png|jpe?g|gif|svg|ico|webp|xml|txt|woff2?)$).*)",
+      "destination": "/index.html"
+    }
+  ]
 }

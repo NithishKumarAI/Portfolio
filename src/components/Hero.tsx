@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, lazy, Suspense } from 'react';
+import ResumeLink from './ResumeLink';
 
 const ProfileSphere = lazy(() => import('./ProfileSphere'));
 
@@ -226,20 +227,7 @@ export default function Hero() {
         >
           VIEW MY WORK
         </a>
-        <a
-          href="/NithishKumar_R_Resume.pdf"
-          target="_blank"
-          download="NithishKumar_R_Resume.pdf"
-          className="inline-flex items-center justify-center px-6 py-2.5 rounded text-sm font-bold transition-all hover:bg-cyan-400"
-          style={{
-            background: '#06b6d4',
-            color: '#000',
-            fontFamily: 'JetBrains Mono, monospace',
-            letterSpacing: '0.05em',
-          }}
-        >
-          DOWNLOAD CV
-        </a>
+        <ResumeLink variant="primary" />
       </div>
 
       {/* Scroll indicator */}

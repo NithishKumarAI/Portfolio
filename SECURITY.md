@@ -12,4 +12,4 @@ This project is a personal portfolio maintained for Nithish Kumar R.
 
 ## File Integrity
 
-The file `public/NithishKumar_R_Resume.pdf` is the official resume used by the portfolio download links.
+The file `public/resume.pdf` is the official resume used by the portfolio download links.
