@@ -71,7 +71,8 @@ const projects = [
     'OpenAI API',
     'LlamaIndex',
     'Notion API',
-    'RAG Systems'
+    'RAG Systems',
+    'Vector DB'
   ],
   liveUrl: '',
   githubUrl: 'https://github.com/NithishKumarAI/semantic-progress-tracker',
