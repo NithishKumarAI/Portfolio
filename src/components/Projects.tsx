@@ -22,40 +22,69 @@ const projects = [
     impactMetric: { value: 92, displayValue: 'AI DIARY', label: 'CLOUD WORKFLOW', prefix: '' },
     image: PROJECT_VISUAL
   },
-  {
-    title: 'Daily Diary Web Application',
-    tagline: 'Memory Diary System',
-    description: 'LLM-powered diary generation system using stored user memory and structured retrieval workflows.',
-    achievements: [
-      'Generated personalized diary summaries',
-      'Implemented memory retrieval workflows',
-      'Structured persistent storage system',
-      'Built Flask + MySQL backend workflows',
-    ],
-    tech: ['Python', 'Flask', 'MySQL', 'LLM APIs'],
-    liveUrl: 'https://ai-diary-assistant.streamlit.app/',
-    githubUrl: 'https://github.com/NithishKumarAI/daily-diary-web-application',
-    gradient: 'from-violet-500 to-cyan-500',
-    impactMetric: { value: 82, displayValue: 'MEMORY', label: 'DIARY SYSTEM', prefix: '' },
-    image: PROJECT_VISUAL
+ {
+  title: 'Food Delivery ETA Prediction',
+  tagline: 'Production ML Pipeline',
+  description: 'Built and deployed an end-to-end ML system for food delivery ETA prediction using feature engineering, CatBoost inference workflows, Docker containerization, and Google Cloud deployment.',
+  achievements: [
+    'Engineered preprocessing, feature engineering, and reusable inference pipelines',
+    'Benchmarked CatBoost, XGBoost, Random Forest, and LightGBM models',
+    'Containerized the application with Docker and deployed on Google Cloud Run',
+  ],
+  tech: [
+    'Python',
+    'Pandas',
+    'Scikit-learn',
+    'CatBoost',
+    'XGBoost',
+    'LightGBM',
+    'Streamlit',
+    'Docker',
+    'Google Cloud Run',
+    'ML Pipelines'
+  ],
+  liveUrl: 'https://food-delivery-api-814424211655.asia-south1.run.app',
+  githubUrl: 'https://github.com/NithishKumarAI/food-delivery-eta-pipeline',
+  gradient: 'from-orange-500 to-red-500',
+  impactMetric: {
+    value: 84,
+    displayValue: '0.84 R²',
+    label: 'ETA MODEL',
+    prefix: ''
   },
+  image: PROJECT_VISUAL
+},
   {
-    title: 'Regional Language NLP Platform',
-    tagline: 'Multilingual NLP',
-    description: 'Multilingual NLP learning platform focused on accessibility and regional language support.',
-    achievements: [
-      'Built multilingual learning workflows',
-      'Integrated translation and summarization APIs',
-      'Improved regional language accessibility',
-      'Developed text-based interaction systems',
-    ],
-    tech: ['Python', 'Flask', 'APIs', 'NLP'],
-    liveUrl: '#',
-    githubUrl: 'https://github.com/NithishKumarAI/regional-language-nlp-platform',
-    gradient: 'from-cyan-500 to-blue-500',
-    impactMetric: { value: 88, displayValue: 'MULTILINGUAL', label: 'NLP SYSTEM', prefix: '' },
-    image: PROJECT_VISUAL
+  title: 'Semantic Progress Tracker',
+  tagline: 'Persistent Memory Intelligence',
+  description: 'Building a production-style AI memory system for semantic progress tracking using vector retrieval, Notion APIs, and LLM-powered reasoning workflows.',
+  achievements: [
+    'Designing semantic retrieval pipelines using vector embeddings and persistent memory systems',
+    'Integrating Notion APIs for contextual study tracking and long-term memory storage',
+    'Building AI-powered progress analytics and personalized retrieval workflows',
+  ],
+  tech: [
+    'Python',
+    'FastAPI',
+    'PostgreSQL',
+    'pgvector',
+    'OpenAI API',
+    'LlamaIndex',
+    'Notion API',
+    'RAG Systems'
+  ],
+  liveUrl: '',
+  githubUrl: 'https://github.com/NithishKumarAI/semantic-progress-tracker',
+  gradient: 'from-cyan-500 to-blue-500',
+  impactMetric: {
+    value: 76,
+    displayValue: 'IN PROGRESS',
+    label: 'AI MEMORY',
+    prefix: ''
   },
+  image: PROJECT_VISUAL,
+  status: 'IN PROGRESS'
+},
 ];
 
 function ProjectCard({ project, index }: { project: typeof projects[0], index: number }) {
