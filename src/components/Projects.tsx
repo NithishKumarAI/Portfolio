@@ -7,6 +7,39 @@ const PROJECT_VISUAL = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/
 
 const projects = [
   {
+  title: 'Cognitive Memory Engine',
+  tagline: 'RAG-Powered Learning Intelligence System',
+  description: 'Developed a production-style AI memory system combining semantic retrieval, vector search, learning analytics, and recommendation workflows to create a personalized learning intelligence platform.',
+  achievements: [
+    'Implemented semantic memory retrieval using pgvector, HNSW indexing, and BGE embeddings',
+    'Built an end-to-end RAG pipeline with Gemini-powered grounded responses and source attribution',
+    'Designed learning analytics and recommendation services from structured memory data',
+    'Deployed a full-stack AI application using Docker and Google Cloud Run'
+  ],
+  tech: [
+    'FastAPI',
+    'PostgreSQL',
+    'pgvector',
+    'Gemini',
+    'BGE Embeddings',
+    'Next.js',
+    'Docker',
+    'Google Cloud',
+    'RAG',
+    'Semantic Search'
+  ],
+  liveUrl: 'https://cognitive-memory-frontend-244986175934.asia-south1.run.app',
+  githubUrl: 'https://github.com/NithishKumarAI/cognitive-memory-engine',
+  gradient: 'from-cyan-500 to-blue-500',
+  impactMetric: {
+    value: 768,
+    displayValue: '768-D VECTOR',
+    label: 'SEMANTIC SEARCH',
+    prefix: ''
+  },
+  image: PROJECT_VISUAL
+},
+  {
     title: 'AI Diary Assistant',
     tagline: 'Cloud AI Journaling Workflow',
     description: 'Built and deployed a cloud-based AI journaling platform integrating browser-native speech transcription, Gemini multi-model fallback routing, and Notion memory APIs for automated diary generation and retrieval workflows.',
@@ -53,39 +86,7 @@ const projects = [
     prefix: ''
   },
   image: PROJECT_VISUAL
-},
-  {
-  title: 'Semantic Progress Tracker',
-  tagline: 'Persistent Memory Intelligence',
-  description: 'Building a production-style AI memory system for semantic progress tracking using vector retrieval, Notion APIs, and LLM-powered reasoning workflows.',
-  achievements: [
-    'Designing semantic retrieval pipelines using vector embeddings and persistent memory systems',
-    'Integrating Notion APIs for contextual study tracking and long-term memory storage',
-    'Building AI-powered progress analytics and personalized retrieval workflows',
-  ],
-  tech: [
-    'Python',
-    'FastAPI',
-    'PostgreSQL',
-    'pgvector',
-    'OpenAI API',
-    'LlamaIndex',
-    'Notion API',
-    'RAG Systems',
-    'Vector DB'
-  ],
-  liveUrl: '',
-  githubUrl: 'https://github.com/NithishKumarAI/semantic-progress-tracker',
-  gradient: 'from-cyan-500 to-blue-500',
-  impactMetric: {
-    value: 76,
-    displayValue: 'IN PROGRESS',
-    label: 'AI MEMORY',
-    prefix: ''
-  },
-  image: PROJECT_VISUAL,
-  status: 'IN PROGRESS'
-},
+}
 ];
 
 function ProjectCard({ project, index }: { project: typeof projects[0], index: number }) {
