@@ -1,0 +1,85 @@
+[1mdiff --git a/src/components/Projects.tsx b/src/components/Projects.tsx[m
+[1mindex 1c429c6..eab36a1 100644[m
+[1m--- a/src/components/Projects.tsx[m
+[1m+++ b/src/components/Projects.tsx[m
+[36m@@ -6,6 +6,39 @@[m [mimport ProjectImpactChart from './ProjectImpactChart';[m
+ const PROJECT_VISUAL = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"%3E%3Crect width="800" height="600" fill="%23050b18"/%3E%3Cg stroke="%2338bdf8" stroke-opacity="0.35" fill="none"%3E%3Cpath d="M72 420C210 245 374 515 516 260S686 270 736 170"/%3E%3Cpath d="M80 170L220 310L390 180L560 350L720 210"/%3E%3Cpath d="M120 500L265 370L420 465L610 300L735 390"/%3E%3C/g%3E%3Cg fill="%238b5cf6" fill-opacity="0.45"%3E%3Ccircle cx="80" cy="170" r="10"/%3E%3Ccircle cx="220" cy="310" r="10"/%3E%3Ccircle cx="390" cy="180" r="10"/%3E%3Ccircle cx="560" cy="350" r="10"/%3E%3Ccircle cx="720" cy="210" r="10"/%3E%3C/g%3E%3Cg fill="%2338bdf8" fill-opacity="0.5"%3E%3Ccircle cx="72" cy="420" r="8"/%3E%3Ccircle cx="516" cy="260" r="8"/%3E%3Ccircle cx="736" cy="170" r="8"/%3E%3Ccircle cx="420" cy="465" r="8"/%3E%3C/g%3E%3C/svg%3E';[m
+ [m
+ const projects = [[m
+[32m+[m[32m  {[m
+[32m+[m[32m  title: 'Cognitive Memory Engine',[m
+[32m+[m[32m  tagline: 'RAG-Powered Learning Intelligence System',[m
+[32m+[m[32m  description: 'Developed a production-style AI memory system combining semantic retrieval, vector search, learning analytics, and recommendation workflows to create a personalized learning intelligence platform.',[m
+[32m+[m[32m  achievements: [[m
+[32m+[m[32m    'Implemented semantic memory retrieval using pgvector, HNSW indexing, and BGE embeddings',[m
+[32m+[m[32m    'Built an end-to-end RAG pipeline with Gemini-powered grounded responses and source attribution',[m
+[32m+[m[32m    'Designed learning analytics and recommendation services from structured memory data',[m
+[32m+[m[32m    'Deployed a full-stack AI application using Docker and Google Cloud Run'[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  tech: [[m
+[32m+[m[32m    'FastAPI',[m
+[32m+[m[32m    'PostgreSQL',[m
+[32m+[m[32m    'pgvector',[m
+[32m+[m[32m    'Gemini',[m
+[32m+[m[32m    'BGE Embeddings',[m
+[32m+[m[32m    'Next.js',[m
+[32m+[m[32m    'Docker',[m
+[32m+[m[32m    'Google Cloud',[m
+[32m+[m[32m    'RAG',[m
+[32m+[m[32m    'Semantic Search'[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  liveUrl: 'https://cognitive-memory-frontend-244986175934.asia-south1.run.app',[m
+[32m+[m[32m  githubUrl: 'https://github.com/NithishKumarAI/cognitive-memory-engine',[m
+[32m+[m[32m  gradient: 'from-cyan-500 to-blue-500',[m
+[32m+[m[32m  impactMetric: {[m
+[32m+[m[32m    value: 768,[m
+[32m+[m[32m    displayValue: '768-D VECTOR',[m
+[32m+[m[32m    label: 'SEMANTIC SEARCH',[m
+[32m+[m[32m    prefix: ''[m
+[32m+[m[32m  },[m
+[32m+[m[32m  image: PROJECT_VISUAL[m
+[32m+[m[32m},[m
+   {[m
+     title: 'AI Diary Assistant',[m
+     tagline: 'Cloud AI Journaling Workflow',[m
+[36m@@ -53,39 +86,7 @@[m [mconst projects = [[m
+     prefix: ''[m
+   },[m
+   image: PROJECT_VISUAL[m
+[31m-},[m
+[31m-  {[m
+[31m-  title: 'Semantic Progress Tracker',[m
+[31m-  tagline: 'Persistent Memory Intelligence',[m
+[31m-  description: 'Building a production-style AI memory system for semantic progress tracking using vector retrieval, Notion APIs, and LLM-powered reasoning workflows.',[m
+[31m-  achievements: [[m
+[31m-    'Designing semantic retrieval pipelines using vector embeddings and persistent memory systems',[m
+[31m-    'Integrating Notion APIs for contextual study tracking and long-term memory storage',[m
+[31m-    'Building AI-powered progress analytics and personalized retrieval workflows',[m
+[31m-  ],[m
+[31m-  tech: [[m
+[31m-    'Python',[m
+[31m-    'FastAPI',[m
+[31m-    'PostgreSQL',[m
+[31m-    'pgvector',[m
+[31m-    'OpenAI API',[m
+[31m-    'LlamaIndex',[m
+[31m-    'Notion API',[m
+[31m-    'RAG Systems',[m
+[31m-    'Vector DB'[m
+[31m-  ],[m
+[31m-  liveUrl: '',[m
+[31m-  githubUrl: 'https://github.com/NithishKumarAI/semantic-progress-tracker',[m
+[31m-  gradient: 'from-cyan-500 to-blue-500',[m
+[31m-  impactMetric: {[m
+[31m-    value: 76,[m
+[31m-    displayValue: 'IN PROGRESS',[m
+[31m-    label: 'AI MEMORY',[m
+[31m-    prefix: ''[m
+[31m-  },[m
+[31m-  image: PROJECT_VISUAL,[m
+[31m-  status: 'IN PROGRESS'[m
+[31m-},[m
+[32m+[m[32m}[m
+ ];[m
+ [m
+ function ProjectCard({ project, index }: { project: typeof projects[0], index: number }) {[m
