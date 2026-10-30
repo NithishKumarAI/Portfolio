@@ -2,27 +2,26 @@ import { motion } from 'framer-motion';
 
 const EXPERIENCES = [
   {
-    title: 'Database Administrator Intern',
-    company: 'IMET Tooling India Pvt Ltd',
-    date: 'Jul 2024 – Mar 2026',
+    title: 'Independent AI & Software Development',
+    company: 'Personal engineering projects',
+    date: 'Project work',
     bullets: [
-      'Designed and managed MySQL database schemas for B2B systems',
-      'Optimized SQL queries and backend workflows',
-      'Supported API integration, testing, and debugging',
-      'Worked in XAMPP-based development environment',
+      'Build LLM applications, local-first assistants, and retrieval-based learning systems',
+      'Develop Python backends with FastAPI, databases, and external API integrations',
+      'Implement reviewed tool execution, persistent memory, and automated verification',
+      'Containerize applications with Docker and deploy software on Google Cloud Run',
     ],
     color: '#06b6d4',
   },
   {
     title: 'IEEE Publication',
-    company: 'ICISS 2026 — IEEE Affiliated Conference',
+    company: 'ICISS 2026',
     date: '2026',
     bullets: [
-      'Published paper on multilingual NLP learning systems',
-      'Worked on AI-driven educational systems for Indian languages',
-      'Focused on multilingual accessibility and NLP workflows',
-      'Contributed to research and system design implementation',
+      'AI-Driven and NLP-Powered Personalized Education Tutor for Various Languages of the Indian Region',
+      'Research on AI and NLP for personalized education across Indian languages',
     ],
+    doi: '10.1109/ICISS67859.2026.11454051',
     color: '#a855f7',
   },
 ];
@@ -94,6 +93,11 @@ export default function Experience() {
                     </li>
                   ))}
                 </ul>
+                {exp.doi && (
+                  <a href={`https://doi.org/${exp.doi}`} target="_blank" rel="noopener noreferrer" className="block mt-4 text-sm text-cyan-400 break-all hover:underline">
+                    DOI: {exp.doi}
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

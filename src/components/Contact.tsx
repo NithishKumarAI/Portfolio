@@ -44,7 +44,7 @@ const contactMethods = [
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Theni, Tamil Nadu, India',
+    value: 'Coimbatore, Tamil Nadu, India',
     color: 'from-emerald-500 to-green-500',
   },
 ];
@@ -67,7 +67,7 @@ export default function Contact() {
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full" />
           <p className="text-gray-400 mt-4 text-lg">
-            Open to opportunities in AI Engineering, Machine Learning, and Data Science
+            Open to Applied AI Engineering, Generative AI Engineering, LLM Systems, Forward Deployed Engineering, and Python AI Backend Development
           </p>
         </motion.div>
 
@@ -128,7 +128,7 @@ export default function Contact() {
             Ready to Build Something Amazing?
           </h3>
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            I'm actively seeking opportunities where I can apply my AI/ML expertise to solve real-world problems. Whether it's a full-time position, internship, or exciting project collaboration, I'd love to hear from you!
+            I'm seeking roles building AI applications, LLM systems, and Python backends with practical integrations. I welcome full-time opportunities and project collaborations.
           </p>
           <motion.a
             href="mailto:nithishswim7@gmail.com"
@@ -149,7 +149,7 @@ export default function Contact() {
           className="mt-12 text-center text-gray-500 text-sm"
         >
           <p>©2026 Nithish Kumar R | Built with AI and curiosity</p>
-          <p className="mt-2">Open to AI engineering and research opportunities</p>
+          <p className="mt-2">Open to applied AI and Python backend engineering opportunities</p>
         </motion.div>
       </div>
     </section>

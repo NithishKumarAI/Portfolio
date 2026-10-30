@@ -20,8 +20,9 @@ const AWARDS = [
   {
     icon: 'IEEE',
     category: 'Research Publication',
-    title: 'IEEE ICISS 2026 Publication',
-    desc: 'Published research paper on multilingual NLP learning systems for Indian languages',
+    title: 'AI-Driven and NLP-Powered Personalized Education Tutor for Various Languages of the Indian Region',
+    desc: 'ICISS 2026 — AI and NLP research on personalized education for Indian languages',
+    doi: '10.1109/ICISS67859.2026.11454051',
     date: '2026',
     color: '#22c55e',
   },
@@ -72,6 +73,11 @@ export default function Awards() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{award.title}</h3>
               <p className="text-sm text-gray-400 leading-relaxed">{award.desc}</p>
+              {award.doi && (
+                <a href={`https://doi.org/${award.doi}`} target="_blank" rel="noopener noreferrer" className="block mt-3 text-xs text-cyan-400 break-all hover:underline">
+                  DOI: {award.doi}
+                </a>
+              )}
               <p
                 className="text-xs font-bold tracking-widest mt-4"
                 style={{ color: award.color, fontFamily: 'JetBrains Mono, monospace' }}

@@ -4,18 +4,11 @@ import ResumeLink from './ResumeLink';
 const ProfileSphere = lazy(() => import('./ProfileSphere'));
 
 const BIOS = [
-  'Artificial Intelligence student focused on <strong>machine learning, AI systems, and LLMs</strong>. Learning the foundations deeply while building practical AI products.',
-  'Exploring <strong>AI research and applied ML engineering</strong>. I like turning models, data, and experiments into useful real-world systems.',
-  'Building toward work in <strong>LLMs, retrieval systems, model evaluation, and AI applications</strong> with a research-first engineering mindset.',
-  'Interested in <strong>how intelligent systems reason, adapt, and fail</strong>. I study model behavior so AI products can become more reliable.',
-  'Focused on <strong>end-to-end AI workflows</strong>: data preparation, model training, evaluation, deployment, and continuous improvement.',
-  'I enjoy building <strong>AI-powered products</strong> that connect strong ML concepts with clean user-facing experiences.',
-  'Learning advanced AI concepts through <strong>hands-on experiments, research papers, and production-minded projects</strong>.',
-  'My goal is to grow into an <strong>AI Research Scientist</strong> who can also engineer systems that work outside the lab.',
-  'Currently sharpening skills across <strong>Python, ML pipelines, neural networks, NLP, and large language models</strong>.',
-  'I care about <strong>responsible AI</strong>: evaluation, bias awareness, interpretability, and building systems users can trust.',
-  'Research interests include <strong>LLM reasoning, retrieval-augmented generation, multimodal AI, and applied machine learning</strong>.',
-  'I am driven by curiosity, disciplined experimentation, and the challenge of building <strong>real-world AI applications</strong>.',
+  'I build <strong>AI applications with LLMs, Python backends, and real-world integrations</strong>. I graduated in 2026 with a B.Tech in Artificial Intelligence and Data Science.',
+  'Developing <strong>local-first AI assistants</strong> with persistent memory, voice interaction, and approval-controlled actions.',
+  'Building <strong>retrieval-based learning systems</strong> using embeddings, PostgreSQL, and vector search.',
+  'Deploying applications with <strong>Docker, Google Cloud Run, and cloud infrastructure</strong>.',
+  'Exploring <strong>reliable AI agents, tool calling, and evaluation</strong> through applied AI engineering projects.',
 ];
 
 export default function Hero() {
@@ -114,10 +107,10 @@ export default function Hero() {
 
       {/* Title */}
       <h2
-        className="text-cyan-400 tracking-widest font-bold mb-8"
+        className="text-cyan-400 tracking-widest font-bold mb-8 text-center px-4"
         style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.9rem', letterSpacing: '0.3em' }}
       >
-        Aspiring AI Research Scientist | AI &amp; ML Engineer
+        AI Engineer | Generative AI, LLM Systems &amp; Python Backend
       </h2>
 
       {/* Bio terminal box */}
@@ -185,10 +178,10 @@ export default function Hero() {
       {/* Stats */}
       <div className="grid grid-cols-4 gap-3 mb-10" style={{ maxWidth: 480, width: '90%' }}>
         {[
-          { value: '1.5+', label: 'YEARS EXP' },
-          { value: 'ICISS', label: 'IEEE 2026', color: '#22d3ee' },
-          { value: '7.25', label: 'CGPA', color: '#c084fc' },
-          { value: '3+', label: 'PROJECTS' },
+          { value: '2026', label: 'GRADUATE' },
+          { value: 'IEEE', label: 'PUBLICATION', color: '#22d3ee' },
+          { value: '7.33', label: 'CGPA', color: '#c084fc' },
+          { value: '5', label: 'FEATURED PROJECTS' },
         ].map(({ value, label, color }) => (
           <div
             key={label}
@@ -201,7 +194,7 @@ export default function Hero() {
             <span className="font-bold text-xl" style={{ color: color ?? '#fff', fontFamily: 'JetBrains Mono, monospace' }}>
               {value}
             </span>
-            <span className="text-gray-500 text-xs mt-1" style={{ letterSpacing: '0.1em', fontFamily: 'JetBrains Mono, monospace' }}>
+            <span className="text-gray-500 text-[0.6rem] sm:text-xs mt-1 text-center" style={{ letterSpacing: '0.1em', fontFamily: 'JetBrains Mono, monospace' }}>
               {label}
             </span>
           </div>

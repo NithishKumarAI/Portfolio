@@ -1,95 +1,102 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { ExternalLink, Github, TrendingUp, Zap, Target, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Github, Zap, Target, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useRef, useState } from 'react';
-import ProjectImpactChart from './ProjectImpactChart';
+import ProjectVisualization from './ProjectVisualization';
+import type { ProjectVisualKind } from './ProjectVisualization';
 
-const PROJECT_VISUAL = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"%3E%3Crect width="800" height="600" fill="%23050b18"/%3E%3Cg stroke="%2338bdf8" stroke-opacity="0.35" fill="none"%3E%3Cpath d="M72 420C210 245 374 515 516 260S686 270 736 170"/%3E%3Cpath d="M80 170L220 310L390 180L560 350L720 210"/%3E%3Cpath d="M120 500L265 370L420 465L610 300L735 390"/%3E%3C/g%3E%3Cg fill="%238b5cf6" fill-opacity="0.45"%3E%3Ccircle cx="80" cy="170" r="10"/%3E%3Ccircle cx="220" cy="310" r="10"/%3E%3Ccircle cx="390" cy="180" r="10"/%3E%3Ccircle cx="560" cy="350" r="10"/%3E%3Ccircle cx="720" cy="210" r="10"/%3E%3C/g%3E%3Cg fill="%2338bdf8" fill-opacity="0.5"%3E%3Ccircle cx="72" cy="420" r="8"/%3E%3Ccircle cx="516" cy="260" r="8"/%3E%3Ccircle cx="736" cy="170" r="8"/%3E%3Ccircle cx="420" cy="465" r="8"/%3E%3C/g%3E%3C/svg%3E';
+interface Project {
+  title: string;
+  tagline: string;
+  description: string;
+  achievements: string[];
+  tech: string[];
+  liveUrl?: string;
+  liveLabel?: string;
+  githubUrl?: string;
+  gradient: string;
+  visualization: ProjectVisualKind;
+}
 
-const projects = [
+const projects: Project[] = [
   {
-  title: 'Cognitive Memory Engine',
-  tagline: 'RAG-Powered Learning Intelligence System',
-  description: 'Developed a production-style AI memory system combining semantic retrieval, vector search, learning analytics, and recommendation workflows to create a personalized learning intelligence platform.',
-  achievements: [
-    'Implemented semantic memory retrieval using pgvector, HNSW indexing, and BGE embeddings',
-    'Built an end-to-end RAG pipeline with Gemini-powered grounded responses and source attribution',
-    'Designed learning analytics and recommendation services from structured memory data',
-    'Deployed a full-stack AI application using Docker and Google Cloud Run'
-  ],
-  tech: [
-    'FastAPI',
-    'PostgreSQL',
-    'pgvector',
-    'Gemini',
-    'BGE Embeddings',
-    'Next.js',
-    'Docker',
-    'Google Cloud',
-    'RAG',
-    'Semantic Search'
-  ],
-  liveUrl: 'https://cognitive-memory-frontend-244986175934.asia-south1.run.app',
-  githubUrl: 'https://github.com/NithishKumarAI/cognitive-memory-engine',
-  gradient: 'from-cyan-500 to-blue-500',
-  impactMetric: {
-    value: 768,
-    displayValue: '768-D VECTOR',
-    label: 'SEMANTIC SEARCH',
-    prefix: ''
+    title: 'Robin',
+    tagline: 'Local-First Personal AI Assistant',
+    description: 'A Windows desktop AI assistant combining local or cloud LLMs, persistent memory, voice, and user-approved actions for email, calendar events, reminders, tasks, and local workflows.',
+    achievements: [
+      'Integrated Ollama and Gemini with model selection and persistent conversation history',
+      'Built SQLite/Qdrant memory and Gmail, Calendar, Tasks, file, and browser integrations',
+      'Implemented approval-controlled tool execution for sensitive actions',
+      'Added voice, wake-word detection, and streaming; release preflight recorded 932 backend and 52 desktop tests passing',
+    ],
+    tech: ['Python', 'FastAPI', 'Electron', 'React', 'TypeScript', 'Google ADK', 'Ollama', 'SQLite', 'Qdrant', 'WebSockets'],
+    liveUrl: 'https://robinpa.in/',
+    liveLabel: 'Project Website',
+    gradient: 'from-cyan-500 to-blue-500',
+    visualization: 'robin',
   },
-  image: PROJECT_VISUAL
-},
+  {
+    title: 'Forge',
+    tagline: 'Local-First Learning & Assessment Platform',
+    description: 'A placement preparation platform organizing structured lessons, Python and SQL practice, timed tests, daily study planning, interview preparation, and progress tracking.',
+    achievements: [
+      'Built subject-based lessons, exercises, and progress tracking; new content awaits independent review',
+      'Implemented Python/SQL practice with deterministic evaluation and backend verification',
+      'Added timed assessments, saved attempts, daily planning, and revision workflows',
+      'Documented Phase 5 verification: 271 backend and 49 frontend tests passing',
+    ],
+    tech: ['Python', 'FastAPI', 'SQLite', 'React', 'TypeScript', 'Pyodide', 'PGlite', 'pytest'],
+    githubUrl: 'https://github.com/NithishKumarAI/Forge',
+    gradient: 'from-blue-500 to-violet-500',
+    visualization: 'forge',
+  },
+  {
+    title: 'LearnTrack',
+    tagline: 'AI Learning Continuity & Memory Platform',
+    description: 'Capture study notes, review AI-extracted learning information, and resume learning through evidence-linked retrieval, personalized checkpoints, and recommendations.',
+    achievements: [
+      'Implemented text and voice capture with editable transcripts and human-reviewed AI interpretations',
+      'Built persistent learning records and retrieval with PostgreSQL, pgvector, and embeddings',
+      'Added source-linked RAG answers, checkpoints, recommendations, and activity analytics',
+      'Developed FastAPI services, authentication, and a Next.js interface with backend and browser verification',
+    ],
+    tech: ['Python', 'FastAPI', 'PostgreSQL', 'pgvector', 'Gemini API', 'BGE Embeddings', 'Next.js', 'Docker', 'RAG'],
+    githubUrl: 'https://github.com/NithishKumarAI/cognitive-memory-engine',
+    gradient: 'from-cyan-500 to-blue-500',
+    visualization: 'learntrack',
+  },
+  {
+    title: 'Food Delivery ETA Prediction',
+    tagline: 'End-to-End Machine Learning Pipeline',
+    description: 'Predicts food delivery time from order information, weather, traffic, and delivery features. Compares regression models and serves predictions through a cloud-deployed Streamlit interface.',
+    achievements: [
+      'Cleaned, engineered features, and preprocessed 41,953 delivery records',
+      'Compared Linear Regression, Random Forest, XGBoost, LightGBM, and CatBoost',
+      'Selected CatBoost with a documented holdout R² of 0.84',
+      'Built reusable inference and deployed the Dockerized Streamlit app on Google Cloud Run',
+    ],
+    tech: ['Python', 'Pandas', 'Scikit-learn', 'CatBoost', 'XGBoost', 'LightGBM', 'Streamlit', 'Docker', 'Google Cloud Run'],
+    githubUrl: 'https://github.com/NithishKumarAI/food-delivery-eta-pipeline',
+    gradient: 'from-orange-500 to-red-500',
+    visualization: 'eta',
+  },
   {
     title: 'AI Diary Assistant',
-    tagline: 'Cloud AI Journaling Workflow',
-    description: 'Built and deployed a cloud-based AI journaling platform integrating browser-native speech transcription, Gemini multi-model fallback routing, and Notion memory APIs for automated diary generation and retrieval workflows.',
+    tagline: 'AI-Powered Voice Journaling',
+    description: 'Record or type daily activities, transcribe voice notes, improve entries with LLMs, and generate daily diary summaries stored in Notion.',
     achievements: [
-      'Built browser-native speech-to-text workflows using Groq Whisper API',
-      'Implemented Gemini multi-model fallback routing for resilient AI inference',
-      'Integrated Notion APIs as a persistent cloud memory layer',
-      ],
-    tech: ['Multi-Model Routing','Python', 'Streamlit', 'Gemini API', 'Groq Whisper API', 'Notion API','GitHub','Streamlit Cloud','LLM Routing'],
-    liveUrl: 'https://ai-diary-assistant-522323461346.asia-south1.run.app/',
-    githubUrl: 'https://github.com/NithishKumarAI/ai-personal-assistant-system',
+      'Integrated Groq Whisper transcription, with a separate local Whisper implementation',
+      'Added Gemini text processing and model fallback workflows',
+      'Integrated Notion APIs to store daily logs and generated diary entries',
+      'Containerized the Streamlit application for Google Cloud Run deployment',
+    ],
+    tech: ['Python', 'Streamlit', 'Gemini API', 'Groq Whisper', 'Ollama', 'Notion API', 'Docker', 'Google Cloud Run'],
+    githubUrl: 'https://github.com/NithishKumarAI/AI-Personal-Assistant-System',
     gradient: 'from-blue-500 to-violet-500',
-    impactMetric: { value: 92, displayValue: 'AI DIARY', label: 'CLOUD WORKFLOW', prefix: '' },
-    image: PROJECT_VISUAL
+    visualization: 'diary',
   },
- {
-  title: 'Food Delivery ETA Prediction',
-  tagline: 'Production ML Pipeline',
-  description: 'Built and deployed an end-to-end ML system for food delivery ETA prediction using feature engineering, CatBoost inference workflows, Docker containerization, and Google Cloud deployment.',
-  achievements: [
-    'Engineered preprocessing, feature engineering, and reusable inference pipelines',
-    'Benchmarked CatBoost, XGBoost, Random Forest, and LightGBM models',
-    'Containerized the application with Docker and deployed on Google Cloud Run',
-  ],
-  tech: [
-    'Python',
-    'Pandas',
-    'Scikit-learn',
-    'CatBoost',
-    'XGBoost',
-    'LightGBM',
-    'Streamlit',
-    'Docker',
-    'Google Cloud Run',
-    'ML Pipelines'
-  ],
-  liveUrl: 'https://food-delivery-api-814424211655.asia-south1.run.app',
-  githubUrl: 'https://github.com/NithishKumarAI/food-delivery-eta-pipeline',
-  gradient: 'from-orange-500 to-red-500',
-  impactMetric: {
-    value: 84,
-    displayValue: '0.84 R²',
-    label: 'ETA MODEL',
-    prefix: ''
-  },
-  image: PROJECT_VISUAL
-}
 ];
 
-function ProjectCard({ project, index }: { project: typeof projects[0], index: number }) {
+function ProjectCard({ project, index }: { project: Project, index: number }) {
   const ref = useRef<HTMLDivElement>(null);
 
   const x = useMotionValue(0);
@@ -135,7 +142,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="group relative perspective-1000 min-w-[350px] md:min-w-[600px] lg:min-w-[900px] snap-center"
+      className="group relative perspective-1000 w-full min-w-0 shrink-0 md:w-[600px] lg:w-[900px] snap-center"
     >
       <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-[2rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         style={{ transform: "translateZ(-50px)" }}
@@ -190,7 +197,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
             ))}
           </div>
 
-          <div className="flex gap-4 pt-2">
+          <div className="flex flex-wrap gap-4 pt-2">
             {project.liveUrl && (
               <motion.a
                 href={project.liveUrl}
@@ -201,7 +208,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
                 className={`flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${project.gradient} rounded-full text-white font-bold text-sm shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all`}
               >
                 <ExternalLink size={16} />
-                Live Demo
+                {project.liveLabel ?? 'Live Demo'}
               </motion.a>
             )}
             {project.githubUrl && (
@@ -220,49 +227,11 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
           </div>
         </div>
 
-        <div className="relative h-[300px] lg:h-auto lg:w-1/2 bg-gradient-to-br from-slate-800 to-slate-900 p-8 flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
-
-          <motion.div
-            className="absolute inset-0 opacity-20"
-            style={{
-              scale: 1.1,
-              translateX: useTransform(mouseX, [-0.5, 0.5], ["-5%", "5%"]),
-              translateY: useTransform(mouseY, [-0.5, 0.5], ["-5%", "5%"]),
-            }}
-          >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </motion.div>
-
-          <motion.div
-            className="relative z-10 w-full max-w-[280px]"
-            style={{ transform: "translateZ(50px)" }}
-          >
-            <div className={`bg-gradient-to-br ${project.gradient} bg-opacity-10 rounded-3xl p-6 border border-white/10 backdrop-blur-md shadow-xl`}>
-              <div className="text-center">
-                <TrendingUp className="w-12 h-12 text-white mx-auto mb-4 drop-shadow-lg" />
-                <div className={`${project.impactMetric.displayValue.length > 10 ? 'text-2xl md:text-3xl leading-tight' : 'text-5xl'} font-black text-white mb-2 tracking-tight drop-shadow-lg`}>
-                  {project.impactMetric.displayValue ?? (
-                    <>
-                      {project.impactMetric.prefix}{project.impactMetric.value}
-                      {!project.impactMetric.prefix && '%'}
-                    </>
-                  )}
-                </div>
-                <div className="text-sm text-white/90 font-bold uppercase tracking-widest leading-tight">
-                  {project.impactMetric.label}
-                </div>
-              </div>
-              <div className="mt-6 h-[100px]">
-                <ProjectImpactChart value={project.impactMetric.value} />
-              </div>
-            </div>
-          </motion.div>
+        <div className="relative h-[300px] lg:h-auto lg:w-1/2 min-w-0 bg-gradient-to-br from-slate-800 to-slate-900 p-4 sm:p-6 lg:p-8 flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.06),transparent_70%)]" />
+          <div className="relative z-10 w-full max-w-[390px] rounded-3xl border border-white/10 bg-slate-950/40 p-2 shadow-xl">
+            <ProjectVisualization kind={project.visualization} />
+          </div>
         </div>
       </div>
     </motion.div>
@@ -336,6 +305,7 @@ export default function Projects() {
         <div className="relative">
           {/* Scroll Buttons for Desktop */}
           <button
+            aria-label="Previous project"
             onClick={scrollLeft}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 bg-slate-800/80 p-3 rounded-full text-white hover:bg-cyan-500 hover:scale-110 transition-all hidden md:block backdrop-blur-sm border border-white/10"
           >
@@ -343,6 +313,7 @@ export default function Projects() {
           </button>
 
           <button
+            aria-label="Next project"
             onClick={scrollRight}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 bg-slate-800/80 p-3 rounded-full text-white hover:bg-cyan-500 hover:scale-110 transition-all hidden md:block backdrop-blur-sm border border-white/10"
           >
